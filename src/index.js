@@ -8,7 +8,7 @@ import { start as dotcloud } from './scenes/dotcloud/main.js';
 import { pick } from './util.js';
 import dat from 'dat.gui';
 
-const demos = [ automata/*, dotcloud*/ ];
+const demos = [ automata, dotcloud ];
 
 window.gui = (on) => on ? localStorage.setItem("controls", true)
                         : localStorage.removeItem("controls");
@@ -20,7 +20,8 @@ window.onload = function start() {
   const app = new Application();
   const gui = localStorage.getItem("controls") ? new dat.GUI() : null;
 
-  pick(demos)(app, gui); // set up the specific app we're gonna show
+  //pick(demos)(app, gui); // set up the specific app we're gonna show
+  dotcloud(app, gui);
 
   document.getElementById('background').appendChild(app.canvas);
 
