@@ -5,10 +5,11 @@ import './util/extensions/dat-ext.js';
 import { Application } from 'three-application';
 import { start as automata } from './scenes/automata/main.js';
 import { start as dotcloud } from './scenes/dotcloud/main.js';
+import { start as voronoi } from './scenes/voronoi/main.js';
 import { pick } from './util.js';
 import dat from 'dat.gui';
 
-const demos = [ automata, dotcloud ];
+const demos = [ automata, dotcloud, voronoi, ];
 
 window.gui = (on) => on ? localStorage.setItem("controls", true)
                         : localStorage.removeItem("controls");
@@ -21,7 +22,7 @@ window.onload = function start() {
   const gui = localStorage.getItem("controls") ? new dat.GUI() : null;
 
   //pick(demos)(app, gui); // set up the specific app we're gonna show
-  dotcloud(app, gui);
+  voronoi(app, gui);
 
   document.getElementById('background').appendChild(app.canvas);
 
