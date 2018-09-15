@@ -10,16 +10,16 @@
     "deploy": "surge ./dist seep.surge.sh"
   },
   "dependencies": {
-    "dat.gui": "^0.7.1",
-    "three": "^0.90.0",
-    "three-application": "github:seep/three-application",
+    "dat.gui": "^0.7.2",
+    "three": "^0.96.0",
+    "three-application": "0.2.0",
     "three-particle-buffer-geometry": "^0.1.0"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.18",
-    "copy-webpack-plugin": "^4.4.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
     "raw-loader": "^0.5.1",
-    "webpack": "^4.0.0",
-    "webpack-cli": "^2.0.8"
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0"
   }
 }
